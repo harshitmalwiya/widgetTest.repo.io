@@ -10,6 +10,24 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://ge-test-harshit-com-developer-edition.ap4.force.com/DemoCommunity/lightning/lightning.out.js"></script>
+		<script>
+		function myFunction() {
+			$Lightning.use("c:WidgetDependancyApp",    // name of the Lightning app
+				function() {                  // Callback once framework and app loaded
+					$Lightning.createComponent(
+						"c:WidgetTestCmp", // top-level component of your app
+						{ },                  // attributes to set on the component when created
+						"testDOM",   // the DOM location to insert the component
+						function(cmp) {
+							// callback when component is created and active on the page
+						}
+					);
+				},
+				'https://ge-test-harshit-com-developer-edition.ap4.force.com/DemoCommunity'  // Community endpoint
+			);
+		}
+		</script>
 	</head>
 	<body>
 
@@ -39,7 +57,8 @@
 					<h1>Transitive</h1>
 					<p>A full responsive, business-oriented HTML5/CSS3 template<br />
 					built by <a href="https://templated.co/">Templated</a> and released under the <a href="https://templated.co/license">Creative Commons</a>.</p>
-					<a href="#one" class="button special scrolly">Get Started</a>
+					<!--a href="#one" class="button special scrolly">Get Started</a-->
+					<button class="button special scrolly" type="button" onclick="myFunction()">Login</button>
 				</div>
 			</section>
 
